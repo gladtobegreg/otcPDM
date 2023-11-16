@@ -648,10 +648,10 @@ async function askMenuOptionLoop() {
   console.log(`    ITEM DATABASE MANAGER\n`);
   console.log(`  ----------------------------------------------------------------------------------------------\n`);
   console.log(`  The following functions are available...\n`);
-  console.log(`    [1] Product Registration \t\t\t|  Add, delete, and update items in the database\n`);
-  console.log(`    [2] Database Refresh \t\t\t|  Sort database and refresh barcode images\n`);
-  console.log(`    [3] Master List \t\t\t\t|  Create a master list html file of all database items\n`);
-  console.log(`    [Q] QUIT\t\t\t\t\t|  Type "Q" or "QUIT" at any time to exit the program`);
+  console.log(`    [1] Product Manager \t|  Add, delete, and update items in the database\n`);
+  console.log(`    [2] Database Refresh \t|  Sort database and refresh barcode images\n`);
+  console.log(`    [3] Master List Generator \t|  Create a master list html file of all database items\n`);
+  console.log(`    [Q] QUIT\t\t\t|  Type "Q" or "QUIT" at any time to exit the program`);
   console.log(`\n  ----------------------------------------------------------------------------------------------\n`);
 
   // Ask for user input
@@ -791,7 +791,7 @@ async function askMenuOptionLoop() {
 // main Function
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-console.log(`\nWelcome to the item database program\nThe program is now loading\n`);
+console.log(`\nWelcome to the product database program\nThe program is now loading\n`);
 askMenuOptionLoop();
 
 //////////////////////////////////////////////////////////////////////////////////////////////////

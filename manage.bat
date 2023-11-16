@@ -4,7 +4,7 @@ setlocal
 REM Navigate to the program folder
 cd /d "%~dp0src\"
 
-REM Execute Node.js program
-node manage.js
+REM Execute Python program
+python manage.py
 
 REM End of script.
