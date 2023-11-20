@@ -190,7 +190,7 @@ def menuPrompt():
 	clearTerminalScreen()
 
 	print("  ----------------------------------------------------------------------------------------------\n")
-	print("    Product Randomizer\n")
+	print("    PRODUCT RANDOMIZER\n")
 	print("  ----------------------------------------------------------------------------------------------\n")
 	print("  This program will make a list of random products from the database to emulate a transaction\n")
 	print("  Answer the following two questions and hit enter. Type 'Q' to exit.\n")
