@@ -34,12 +34,12 @@ def question(prompt, validation=lambda input_str: True):
             if validation(userInput):
                 return userInput
             else:
-                raise ValueError("Invalid input. Try again.") 
+                raise ValueError("  Invalid input. Try again.") 
         except KeyboardInterrupt:
-            print("\nCtrl+c was pressed. Exiting program.")
+            print("\n  Ctrl+c was pressed. Exiting program.")
             exit()
-		except:
-			print(f"Invalid input")
+        except:
+        	print(f"  Invalid input")
 
 ############################################################################################
 # Utility functions defined here to facilitate display, functions, errors
@@ -47,8 +47,17 @@ def question(prompt, validation=lambda input_str: True):
 
 # Function used to facilitate calling quit function from dictionary with a message
 def quitMessage():
-    print("\nYou entered 'Q' to quit the program. Bye bye!")
+    print("\n  You entered 'Q' to quit the program. Bye bye!")
     exit()
+
+# Function used to facilitate wiping terminal for clean user experience
+def clearTerminalScreen():
+    if os.name == 'posix':
+        os.system('clear')
+    elif os.name == 'nt':
+        os.system('cls')
+    else:
+        print("\n")
 
 # Function used to sort json data in ascending order of fullPrice
 def sortJson(jsonData):
@@ -178,17 +187,20 @@ def htmlBuilder(category, total, selectedItems, remainder):
 # Initial menu with primary functions
 def menuPrompt():
 
-	print("##########################################################################################\n")
-	print("# Product Randomizer\n")
-	print("##########################################################################################\n")
-	print("    The program will make a list of random products from the database to emulate a transaction.")
-	print("    Answer the following two questions and hit enter. Type 'Q' to exit.\n")
+	clearTerminalScreen()
+
+	print("  ----------------------------------------------------------------------------------------------\n")
+	print("    Product Randomizer\n")
+	print("  ----------------------------------------------------------------------------------------------\n")
+	print("  This program will make a list of random products from the database to emulate a transaction\n")
+	print("  Answer the following two questions and hit enter. Type 'Q' to exit.\n")
+	print("  ----------------------------------------------------------------------------------------------\n")
 
 	# Request category from user, validate for Y/N answers only
-	category = question("Would you like to randomize products from the food database? Y/N ", booleanCharacterValidation)
+	category = question("\033[92m  Would you like to randomize products from the food database? Y/N \033[0m", booleanCharacterValidation)
 
 	# Request total from user, validate for monetary values
-	total = float(question("What is your transaction total? ", validation=monetaryValueValidation))
+	total = float(question("\033[92m  What is your transaction total? \033[0m", validation=monetaryValueValidation))
 
 	# Reformat user input to fit later use
 	if category == 'y':
@@ -231,11 +243,11 @@ def menuPrompt():
 	try:
 		htmlBuilder(category, total, selectedItems, remainder)
 	except Exception as e:
-		print(f"Failed to build and write html file: {e}")
+		print(f"  Failed to build and write html file: {e}")
 		traceback.print_exc()
 
 	# Exit prompt
-	confirmPrompt = question("Done creating random transaction\nPress enter to continue...")
+	confirmPrompt = question("\n  Done creating random transaction\n  Press enter to continue...")
 
 # End of menuPrompt
 
