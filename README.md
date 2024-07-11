@@ -91,3 +91,5 @@ Note that the batch files were written to utilize the Python version of the prog
 	python randomize.py > node randomize.js
 
 Or vise versa to change batch script from python to javascript.
+
+This project is licensed under the MIT License - see the LICENSE file for details.
