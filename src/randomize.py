@@ -264,3 +264,12 @@ menuPrompt()
 # Date: October 2023
 #
 ###########################################################################
+#
+# MIT License
+#
+# Copyright (c) 2023 Gregory Guevara gladtobegreg
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+#
+####################################################################################
