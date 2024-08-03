@@ -1,4 +1,4 @@
-# OTC Product Database Manager and Random Transaction Generator
+# Product Database Manager Command Line Tool
 
 ## Introduction
 
